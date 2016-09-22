@@ -12,9 +12,13 @@ fastlane add_plugin get_unprovisioned_devices_from_hockey
 
 ## About get_unprovisioned_devices_from_hockey
 
-Retrieves a list of unprovisioned devices from Hockey which can be passed directly into register_devices.
+Retrieves a list of unprovisioned devices from Hockey which can be passed directly into register_devices. This will return the name and UDID for any user who has installed the HockeyApp profile on their phone but is not yet part of the provisioning profile. 
 
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+When used with `register_devices` and `match`, this will result in a workflow where you can ask users to log in and register their phone through rink.hockeyapp.net, then kick off a new build that will automatically be provisioned for their device.
+
+get_unprovisioned_devices_from_hockey will use `FL_HOCKEY_API_TOKEN` for the Hockey API token, or it can be provided using the `api_token` parameter.
+
+An example of how get_unprovisioned_devices_from_hockey is used:
 
 ```ruby
 new_devices = get_unprovisioned_devices_from_hockey(app_bundle_id:'com.leandog.MyApp')
@@ -25,8 +29,6 @@ match(force: true)
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`. 
-
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
 
 ## Run tests for this plugin
 
