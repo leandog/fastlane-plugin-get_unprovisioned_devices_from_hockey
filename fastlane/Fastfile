@@ -1,0 +1,3 @@
+lane :test do
+  get_unprovisioned_devices_from_hockey
+end
