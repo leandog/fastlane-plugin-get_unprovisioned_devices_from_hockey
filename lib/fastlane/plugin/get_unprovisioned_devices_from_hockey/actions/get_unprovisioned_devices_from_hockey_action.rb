@@ -72,7 +72,7 @@ module Fastlane
         apps_response = JSON.parse(response.body)
 
         apps_response['apps'].each do |app|
-          if app['bundle_identifier'] == bundle_id
+          if app['bundle_identifier'] == bundle_id and app['platform'] == 'iOS'
             app_public_id = app['public_identifier']
           end
         end
