@@ -34,7 +34,7 @@ module Fastlane
                                        env_name: 'FL_HOCKEY_API_TOKEN',
                                        description: 'API Token for Hockey'),
           FastlaneCore::ConfigItem.new(key: :app_bundle_id,
-                                       description: 'App bundle identifier to get unprovisioned devices for (example: com.company.AppName).')
+                                       description: 'App bundle identifier to get unprovisioned devices for (example: com.company.AppName)')
         ]
       end
 
