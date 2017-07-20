@@ -11,7 +11,7 @@ module Fastlane
 
         hockey_app_id = hockey_app_id_for_bundle_id(bundle_id, api_token)
         if hockey_app_id.empty?
-          UI.user_error! "Could not find an app in Hockey with bundle ID matching #{bundle_id}"
+          UI.abort_with_message! "Could not find an app in Hockey with bundle ID matching #{bundle_id}"
         end
 
         devices = unprovisioned_devices_for_hockey_app_id(hockey_app_id, api_token)
