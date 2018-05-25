@@ -92,7 +92,7 @@ module Fastlane
         end
 
         devices_response = JSON.parse(response.body)['devices']
-        Hash[devices_response.collect { |item| [item['name'], item['udid']] }]
+        Hash[devices_response.collect { |item| [item['name'][0..49], item['udid']] }]
       end
     end
   end
