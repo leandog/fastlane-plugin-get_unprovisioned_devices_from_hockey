@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 lane :test do
   # Navigate to rink.hockeyapp.net on your phone, log in, and register device.
   new_devices = get_unprovisioned_devices_from_hockey(app_bundle_id: 'com.your_company.YourAppInHockey')

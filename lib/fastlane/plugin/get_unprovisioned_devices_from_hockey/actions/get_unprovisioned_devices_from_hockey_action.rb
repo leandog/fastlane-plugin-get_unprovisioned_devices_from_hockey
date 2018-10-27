@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Fastlane
   module Actions
     module SharedValues
@@ -42,7 +44,7 @@ module Fastlane
         'The list of unprovisioned devices.'
       end
 
-      def self.is_supported?(platform)
+      def self.is_supported?(_platform)
         true
       end
 
@@ -72,7 +74,7 @@ module Fastlane
         apps_response = JSON.parse(response.body)
 
         apps_response['apps'].each do |app|
-          if app['bundle_identifier'] == bundle_id and app['platform'] == 'iOS'
+          if (app['bundle_identifier'] == bundle_id) && (app['platform'] == 'iOS')
             app_public_id = app['public_identifier']
           end
         end

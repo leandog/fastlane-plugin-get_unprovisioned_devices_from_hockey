@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'fastlane/plugin/get_unprovisioned_devices_from_hockey/version'
 
 module Fastlane
