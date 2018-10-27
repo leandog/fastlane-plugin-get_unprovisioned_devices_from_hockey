@@ -7,8 +7,8 @@ require 'fastlane/plugin/get_unprovisioned_devices_from_hockey/version'
 Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-get_unprovisioned_devices_from_hockey'
   spec.version       = Fastlane::GetUnprovisionedDevicesFromHockey::VERSION
-  spec.author        = 'GaryJohnson'
-  spec.email         = 'gary@gjtt.com'
+  spec.author        = ['GaryJohnson', 'kumichou']
+  spec.email         = ['gary@gjtt.com', 'eric.hankinson@gmail.com']
 
   spec.summary       = 'Retrieves a list of unprovisioned devices from Hockey which can be passed directly into register_devices.'
   spec.homepage = 'https://github.com/leandog/fastlane-plugin-get_unprovisioned_devices_from_hockey'
